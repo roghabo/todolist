@@ -1,0 +1,17 @@
+@import "./reset.scss";
+@import "./variable";
+
+@import "./components/Header/Header.scss";
+@import "./components/Main/Main.scss";
+@import "./components/Footer/Footer.scss";
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  height: 100vh;
+  background-color: $white;
+}

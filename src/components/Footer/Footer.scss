@@ -1,0 +1,9 @@
+.footer {
+  height: 3vh;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2rem;
+  &__text {
+    opacity: 0.5;
+  }
+}
