@@ -4,10 +4,11 @@ react 와 redux를 이용한 todo list (localstorage 이용)
 
 ## ToDo
 
-- [ ] 디자인
+- [x] 디자인
 - [ ] html 및 대략적인 css
-- [ ] week javascript 구현
-- [ ] todo javascript 구
+- [ ] 날짜, 시간 불러오기
+- [ ] redux persist localstorage를 이용해 title저장하고 수정하기
+- [ ] todo javascript 구현
 
 ## 더 해보고 싶은 것들
 
