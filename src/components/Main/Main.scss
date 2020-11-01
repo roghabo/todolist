@@ -1,4 +1,119 @@
 .main {
   height: 85vh;
   padding: 3rem;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  column-gap: 5rem;
+  margin: 0rem 3rem;
+}
+
+.week__container {
+  box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.35);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 2rem;
+  padding: 5rem 3rem;
+  .goal {
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 2rem;
+    }
+    &__title {
+      display: flex;
+      align-items: center;
+    }
+    &__content {
+      font-size: 1.8rem;
+      &--form {
+        position: relative;
+        display: flex;
+        align-items: center;
+        &--input {
+          background-color: transparent;
+          padding-left: 4rem;
+          font-size: 1.8rem;
+          border: none;
+          border-bottom: 1px solid gray;
+          height: 5rem;
+          width: 100%;
+          &:focus {
+            outline: none;
+            border-bottom: 2px solid #0984e3;
+          }
+          &:hover {
+            border-bottom: 2px solid #0984e3;
+          }
+        }
+        &--btn {
+          font-size: 1.8rem;
+          font-weight: bold;
+          position: absolute;
+          right: 1rem;
+          color: #0984e3;
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      &--ul {
+        height: 100%;
+        &--li {
+          position: relative;
+          display: flex;
+          align-items: center;
+          padding: 0rem 3rem;
+          font-size: 1.8rem;
+          height: 5rem;
+          border: none;
+          border-bottom: 1px solid gray;
+          &:hover {
+            > button {
+              opacity: 1;
+            }
+          }
+          button {
+            position: absolute;
+            right: 2rem;
+            background-color: transparent;
+            border: none;
+            opacity: 0;
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .pray {
+    h1 {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+.today__container {
+  box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.35);
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  row-gap: 2rem;
+  padding: 5rem;
+  .goal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-size: 2.4rem;
+    }
+  }
+  .todo {
+    h1 {
+      font-size: 2.4rem;
+    }
+  }
 }
