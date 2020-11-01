@@ -16,38 +16,73 @@
   .goal {
     h1 {
       font-size: 2.4rem;
-      margin-bottom: 2rem;
-    }
-    &__title {
-      display: flex;
-      align-items: center;
     }
     &__content {
       font-size: 1.8rem;
       &--form {
+        padding-top: 3rem;
         position: relative;
         display: flex;
         align-items: center;
+        height: 7rem;
+        overflow: hidden;
         &--input {
           background-color: transparent;
-          padding-left: 4rem;
           font-size: 1.8rem;
           border: none;
-          border-bottom: 1px solid gray;
-          height: 5rem;
+          height: 100%;
           width: 100%;
           &:focus {
             outline: none;
-            border-bottom: 2px solid #0984e3;
           }
-          &:hover {
-            border-bottom: 2px solid #0984e3;
+
+          &:focus + label span,
+          &:valid + label span {
+            transform: translateY(-30%);
+            font-size: 1.4rem;
+            color: #0984e3;
           }
+          &:focus + label::after,
+          &:valid + label::after {
+            transform: translateX(0%);
+          }
+        }
+        &--label {
+          position: absolute;
+          left: 0rem;
+          bottom: 0rem;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          border-bottom: 1px solid gray;
+          display: flex;
+          align-items: center;
+
+          span {
+            height: 100%;
+            position: absolute;
+            left: 0rem;
+            top: 4rem;
+            transform: all 0.3 ease;
+            transition: all 0.3s ease;
+          }
+        }
+        &--label::after {
+          content: "";
+          position: absolute;
+          left: 0rem;
+          bottom: -0.2rem;
+          width: 100%;
+          height: 100%;
+          border-bottom: 3px solid #0984e3;
+          transform: translateX(-100%);
+          transition: transform 0.3s ease;
         }
         &--btn {
           font-size: 1.8rem;
           font-weight: bold;
           position: absolute;
+          bottom: 1rem;
           right: 1rem;
           color: #0984e3;
           background-color: transparent;

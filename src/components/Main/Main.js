@@ -28,7 +28,7 @@ export default () => {
           </div>
           <div class="goal__content">
             <form class="goal__content--form" onSubmit={onSubmit}>
-              <FontAwesomeIcon
+              {/* <FontAwesomeIcon
                 icon={faPlus}
                 style={{
                   color: "0984e3",
@@ -36,14 +36,19 @@ export default () => {
                   position: "absolute",
                   left: "1rem",
                 }}
-              />
+              /> */}
               <input
                 class="goal__content--form--input"
-                placeholder="Add new goal"
                 type="text"
                 value={text}
                 onChange={onChange}
+                name="week__goal"
+                autoComplete="off"
+                required
               />
+              <label for="week__goal" class="goal__content--form--label">
+                <span>Add new goal</span>
+              </label>
               <button class="goal__content--form--btn">Add</button>
             </form>
 
